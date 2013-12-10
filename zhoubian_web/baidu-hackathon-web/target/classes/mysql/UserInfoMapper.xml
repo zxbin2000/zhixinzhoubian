@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="com.baidu.hackathon.dao.UserInfoDao">
+	<resultMap id="UserInfoMap" type="UserInfo">
+	    <id property="sysId" column="sys_id" />
+	    <result property="userCode" column="user_code"/>
+	    <result property="userName" column="user_name"/>
+	    <result property="loginName" column="login_name"/>
+	    <result property="password" column="password"/>
+	    <result property="gender" column="gender"/>
+	    <result property="role" column="role"/>
+	    <result property="messageCount" column="message_count"/>
+	    <result property="fansCount" column="fans_count"/>
+	    <result property="followCount" column="follow_count"/>
+	    <result property="loginTime" column="login_time"/>
+	    <result property="createTime" column="create_time"/>
+	    <result property="updateTime" column="update_time"/>
+	    <result property="validate" column="validate"/>
+	    <result property="yn" column="yn"/>
+	</resultMap>
+	<sql id="sqlColumns">
+		sys_id,user_code,user_name,login_name,password,gender,message_count,fans_count,follow_count,
+		login_time,create_time,update_time,validate,yn
+	</sql>
+	
+ 	<select id="selectOne" parameterType="java.lang.String" resultMap="UserInfoMap"> 
+ 		select
+ 			<include refid="sqlColumns" /> 
+		from user_info
+		where yn=1
+		<if test="loginName != null">
+			and login_name = #{loginName}
+		</if>
+		<if test="userCode != null">
+			and sys_id = #{userCode}
+		</if>
+		limit 1
+ 	</select>
+ 	
+ 	<insert id="addItem" parameterType="UserInfo">
+ 		<selectKey resultType="java.lang.Integer" keyProperty="sysId" order="AFTER">
+ 			select @@identity
+ 		</selectKey>
+ 		insert into user_info 
+	    	(<include refid="sqlColumns" />)
+		values (null, 1, #{userName}, #{loginName}, #{password}, #{gender}, #{messageCount},
+				#{fansCount}, #{followCount}, #{loginTime}, #{createTime}, #{updateTime}, #{validate}, 1 )
+ 	</insert>
+</mapper>

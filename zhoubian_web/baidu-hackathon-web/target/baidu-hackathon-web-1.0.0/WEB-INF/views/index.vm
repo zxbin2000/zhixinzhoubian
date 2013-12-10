@@ -1,0 +1,44 @@
+#set($layout = "layout/empty.vm")
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<title>零零户外-旅行攻略专业门户网站</title>
+	<link href="/static/images/00.png" type="image/ico" rel="shortcut icon"/>
+	<link href="/static/css/base.css" rel="stylesheet" type="text/css" media="all"/>
+	<link href="/static/css/index.css" rel="stylesheet" type="text/css" media="all"/>
+	<script type="text/javascript" src="/static/js/plugins/jquery.min.1.7.2.js"></script>
+	<script type="text/javascript" src="/static/js/plugins/jquery.poshytip.min.js"></script>
+	<script type="text/javascript" src="/static/js/plugins/jquery-impromptu.4.0.js"></script>
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true&language=zh_ch"></script>
+	<script type="text/javascript" src="/static/js/huwai/gmap.js"></script>
+	<script type="text/javascript" src="/static/js/huwai/base.js"></script>
+</head>
+<body>
+	<!--header panel-->
+	#parse("/layout/header.vm")
+
+	<!--page panel-->
+	<div class="page_wrap">
+		<div class="main_wrap">
+			<div id="map_canvas"></div>
+		</div>
+		<div class="side_wrap">
+			side wrap
+		</div>
+		<div class="content">
+			<div class="hd">
+				<ul>
+					<li class="on"><a id="btn_tp0" href="" title="热门旅行游记">热门游记</a></li>
+					<li><a id="btn_tp1" href="" title="最新旅游攻略">最新发表</a></li>
+					<li><a id="btn_tp2" href="" title="旅行游记热榜">一周热榜</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<!--footer panel-->
+	#parse("/layout/footer.vm")
+</body>
+</html>
