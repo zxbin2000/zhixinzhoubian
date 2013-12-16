@@ -4,41 +4,19 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-	<title>零零户外-旅行攻略专业门户网站</title>
-	<link href="/static/images/00.png" type="image/ico" rel="shortcut icon"/>
-	<link href="/static/css/base.css" rel="stylesheet" type="text/css" media="all"/>
-	<link href="/static/css/index.css" rel="stylesheet" type="text/css" media="all"/>
-	<script type="text/javascript" src="/static/js/plugins/jquery.min.1.7.2.js"></script>
-	<script type="text/javascript" src="/static/js/plugins/jquery.poshytip.min.js"></script>
-	<script type="text/javascript" src="/static/js/plugins/jquery-impromptu.4.0.js"></script>
-	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true&language=zh_ch"></script>
-	<script type="text/javascript" src="/static/js/huwai/gmap.js"></script>
-	<script type="text/javascript" src="/static/js/huwai/base.js"></script>
+	<title>知心周边-即将推出，敬请期待</title>
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" />
+    <link rel="stylesheet" href="/static/css/styles.css" />
+    <link rel="stylesheet" href="/static/css/jquery.countdown.css" />
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="/static/js/jquery.countdown.js"></script>
+	<script src="/static/js/script.js"></script>
+	<!--[if lt IE 9]>
+    	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 </head>
 <body>
-	<!--header panel-->
-	#parse("/layout/header.vm")
-
-	<!--page panel-->
-	<div class="page_wrap">
-		<div class="main_wrap">
-			<div id="map_canvas"></div>
-		</div>
-		<div class="side_wrap">
-			side wrap
-		</div>
-		<div class="content">
-			<div class="hd">
-				<ul>
-					<li class="on"><a id="btn_tp0" href="" title="热门旅行游记">热门游记</a></li>
-					<li><a id="btn_tp1" href="" title="最新旅游攻略">最新发表</a></li>
-					<li><a id="btn_tp2" href="" title="旅行游记热榜">一周热榜</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	
-	<!--footer panel-->
-	#parse("/layout/footer.vm")
+	<div id="countdown"></div>
+	<p id="note"></p>
 </body>
 </html>

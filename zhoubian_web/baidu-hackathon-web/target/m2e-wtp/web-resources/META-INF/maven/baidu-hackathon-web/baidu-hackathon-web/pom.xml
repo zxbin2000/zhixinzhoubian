@@ -11,11 +11,18 @@
 	<groupId>baidu-hackathon-web</groupId>
 	<artifactId>baidu-hackathon-web</artifactId>
 	<name>baidu-hackathon-web</name>
+	<packaging>war</packaging>
+	<version>1.0.0</version>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<org.springframework.version>3.1.0.RELEASE</org.springframework.version>
 	</properties>
 	<dependencies>
+		<dependency>
+	    	<groupId>com.alibaba</groupId>
+	    	<artifactId>fastjson</artifactId>
+	    	<version>1.1.23</version>
+		</dependency>
 		<dependency>
         	<groupId>mysql</groupId>
         	<artifactId>mysql-connector-java</artifactId>
@@ -130,6 +137,8 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-	<packaging>war</packaging>
-	<version>1.0.0</version>
+	
+	<build>
+		<finalName>baidu-hackathon-web</finalName>
+	</build>
 </project>
