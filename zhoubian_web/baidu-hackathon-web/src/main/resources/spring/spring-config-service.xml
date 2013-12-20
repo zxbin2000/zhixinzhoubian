@@ -10,5 +10,16 @@
 		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd"
 	default-lazy-init="false" default-autowire="byName">
 	
+    <bean id="userInfoService" class="com.baidu.hackathon.service.UserInfoService" />
+    
+    <bean id="searchCloudService" class="com.baidu.hackathon.service.SearchCloudService" />
+    
+    <bean id="searchPoiService" class="com.baidu.hackathon.service.SearchPoiService" />
+    
+	<bean id="mapSearchService" class="com.baidu.hackathon.service.MapSearchService" />
+	
+	<bean id="subscibeService" class="com.baidu.hackathon.service.SubscibeService" />
+	
+	<bean id="replyInfoService" class="com.baidu.hackathon.service.ReplyInfoService" />
 	
 </beans>

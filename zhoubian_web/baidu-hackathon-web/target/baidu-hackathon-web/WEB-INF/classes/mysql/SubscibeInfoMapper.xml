@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="com.baidu.hackathon.dao.SubscibeDao">
+	<resultMap id="SubscibeInfoMap" type="SubscibeInfo">
+	    <id property="subscibeId" column="subscibeId" />
+	    <result property="userId" column="userId" />
+	    <result property="tagList" column="tagList" />
+	    <result property="distance" column="distance" />
+	    <result property="frequency" column="frequency" />
+	</resultMap>
+	<sql id="sqlColumns">
+		subscibeId,userId,tagList,distance,frequency
+	</sql>
+	
+	<insert id="addItem" parameterType="SubscibeInfo">
+ 		<selectKey resultType="java.lang.Integer" keyProperty="subscibeId" order="AFTER">
+ 			select @@identity
+ 		</selectKey>
+ 		insert into subscibe_info 
+	    	(<include refid="sqlColumns" />)
+		values (null, #{userId}, #{tagList}, #{distance}, #{frequency} )
+ 	</insert>
+	
+ 	<select id="selectOne" parameterType="SubscibeInfo" resultMap="SubscibeInfoMap"> 
+ 		select
+ 			<include refid="sqlColumns" /> 
+		from subscibe_info
+		where 1 
+		<if test="userId != null">
+			and userId = #{userId}
+		</if>
+		limit 1
+ 	</select>
+ 
+</mapper>

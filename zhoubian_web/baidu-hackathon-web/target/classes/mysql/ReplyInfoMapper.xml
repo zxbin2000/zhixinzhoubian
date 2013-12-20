@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="com.baidu.hackathon.dao.ReplyInfoDao">
+	<resultMap id="ReplyInfoMap" type="ReplyInfo">
+	    <id property="replyId" column="replyId" />
+	    <result property="userId" column="userId" />
+	    <result property="poiId" column="poiId"/>
+	    <result property="message" column="message"/>
+	    <result property="timeline" column="timeline"/>
+	</resultMap>
+	<sql id="sqlColumns">
+		replyId,userId,poiId,message,timeline
+	</sql>
+	
+	<insert id="addItem" parameterType="ReplyInfo">
+ 		<selectKey resultType="java.lang.Integer" keyProperty="replyId" order="AFTER">
+ 			select @@identity
+ 		</selectKey>
+ 		insert into reply_info 
+	    	(<include refid="sqlColumns" />)
+		values (null, #{userId}, #{poiId}, #{message},#{timeline} )
+ 	</insert>
+	
+ 	<select id="selectOne" parameterType="ReplyInfo" resultMap="ReplyInfoMap"> 
+ 		select
+ 			<include refid="sqlColumns" /> 
+		from reply_info
+		where 1 
+		<if test="userId != null">
+			and userId = #{userId}
+		</if>
+		<if test="poiId != null">
+			and poiId = #{poiId}
+		</if>
+		limit 1
+ 	</select>
+ 
+</mapper>

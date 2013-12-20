@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">  
-<configuration>  
+<configuration>
+    
     <typeAliases>
         <typeAlias alias="UserInfo" type="com.baidu.hackathon.domain.UserInfo"/>
+        <typeAlias alias="SubscibeInfo" type="com.baidu.hackathon.domain.SubscibeInfo"/>
+        <typeAlias alias="ReplyInfo" type="com.baidu.hackathon.domain.ReplyInfo" />
     </typeAliases>
+    
     <mappers>
         <mapper resource="mysql/UserInfoMapper.xml" />
+        <mapper resource="mysql/SubscibeInfoMapper.xml" />
+        <mapper resource="mysql/ReplyInfoMapper.xml" />
     </mappers>
 </configuration>
