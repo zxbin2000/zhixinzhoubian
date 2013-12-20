@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width"/>
+    <title>
+北京鼓楼四合院家庭旅社    </title>
+    <link rel="stylesheet" type="text/css" href="bb.xx/main_f0ceb3a.css"/>
+    <link rel="stylesheet" type="text/css" href="bb.xx/util_29bf1f1.css"/>
+    <link rel="stylesheet" type="text/css" href="bb.xx/index_f87f690.css"/>
+    <link rel="stylesheet" type="text/css" href="bb.xx/bmap.css"/>
+  </head>
+  <body>
+    <div id="main">
+      <div id="search">
+        <div class="logo_nav">
+          <span class="logo">
+            <a id="imgLogo" href="http://map.baidu.com">
+              <img title="百度地图" height="38" alt="百度地图" width="117" src="bb.xx/logo-map_da05830.png"/>
+            </a>
+          </span>
+          <span class="nav">
+            <a href="http://news.baidu.com/">
+新闻            </a>
+              <a href="http://www.baidu.com/">
+网页            </a>
+              <a href="http://tieba.baidu.com/">
+贴吧            </a>
+              <a href="http://zhidao.baidu.com/">
+知道            </a>
+              <a href="http://music.baidu.com/?fr=map">
+音乐            </a>
+              <a href="http://image.baidu.com/">
+图片            </a>
+              <a href="http://v.baidu.com/">
+视频            </a>
+              <strong>
+地图            </strong>
+          </span>
+        </div>
+        <div class="search_box">
+          <form id="form1" name="fmwd">
+            <div class="search_input">
+              <span class="input_span1" id="PoiSearchSpan">
+                <input type="text" name="word" class="input1" maxlength="256" id="PoiSearch" autocomplete="off"/>
+              </span>
+              <input type="hidden" name="ft" value="tab"/>
+              <ul class="tab">
+                <li id="tab1" class="on">
+搜索                </li>
+                <li id="tab2" onmouseover="this.className='other_on'" onmouseout="this.className=''">
+公交                </li>
+                <li id="tab3" onmouseover="this.className='other_on'" onmouseout="this.className=''">
+驾车                </li>
+              </ul>
+            </div>
+            <div class="search_input1">
+              <span class="input_span">
+                <input value="百度一下" title="百度一下" type="submit" onmouseout="this.className=''" onmousedown="this.className='down'" onmouseup="this.className=''" onclick="addStat({area:'head_search'});"/>
+              </span>
+              <span class="help_list">
+                <a href="http://www.baidu.com/search/map_help.html" target="_blank">
+帮助                </a>
+              </span>
+            </div>
+          </form>
+          <form id="form2" name="fmbus" style="display: none;">
+            <div class="search_input">
+              <span class="input_span2" id="BusSearchStaSpan">
+                <input type="text" name="word_from" class="input2 input_start" maxlength="256" id="BusSearchSta" autocomplete="off" _from="start"/>
+              </span>
+              <span class="return_icon" id="busReturnIcon" title="切换起终点">
+              </span>
+              <span class="input_span3" id="BusSearchEndSpan">
+                <input type="text" name="word_to" class="input3 input_end" maxlength="256" id="BusSearchEnd" autocomplete="off" _from="end"/>
+              </span>
+              <ul class="tab">
+                <li id="tab1" onmouseover="this.className='other_on'" onmouseout="this.className=''">
+                </li>
+                <li id="tab2" class="on">
+                </li>
+                <li id="tab3" onmouseover="this.className='other_on'" onmouseout="this.className=''">
+                </li>
+              </ul>
+            </div>
+            <div class="search_input1">
+              <span class="input_span">
+                <input value="百度一下" title="百度一下" type="submit" onmouseout="this.className=''" onmousedown="this.className='down'" onmouseup="this.className=''" onclick="addStat({item:'head_search'});"/>
+              </span>
+              <span class="help_list">
+                <a href="http://www.baidu.com/search/map_help.html" target="_blank">
+                </a>
+              </span>
+            </div>
+          </form>
+          <form id="form3" name="fmnav" style="display: none;">
+            <div class="search_input">
+              <span class="input_span2" id="DriveSearchStaSpan">
+                <input type="text" name="word_from" class="input2 input_start" maxlength="256" id="DriveSearchSta" autocomplete="off" _from="start"/>
+              </span>
+              <span class="return_icon" id="navReturnIcon" title="切换起终点">
+              </span>
+              <span class="input_span3" id="DriveSearchEndSpan">
+                <input type="text" name="word_to" class="input3 input_end" maxlength="256" id="DriveSearchEnd" autocomplete="off" _from="end"/>
+              </span>
+              <ul class="tab">
+                <li id="tab1" onmouseover="this.className='other_on'" onmouseout="this.className=''">
+                </li>
+                <li id="tab2" onmouseover="this.className='other_on'" onmouseout="this.className=''">
+                </li>
+                <li id="tab3" class="on">
+                </li>
+              </ul>
+            </div>
+            <div class="search_input1">
+              <span class="input_span">
+                <input value="百度一下" title="百度一下" type="submit" onmouseout="this.className=''" onmousedown="this.className='down'" onmouseup="this.className=''" onclick="addStat({item:'head_search'});"/>
+              </span>
+              <span class="help_list">
+                <a href="http://www.baidu.com/search/map_help.html" target="_blank">
+                </a>
+              </span>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div id="content" class="clearfix">
+        <div id="MainLeft" class="main">
+<!--widget基本信息 widget中用到的数据可以当参数传入-->          <div id="basicInfo" class="section-info basic-info">
+            <div class="hd">
+              <a id="btn-authe" monitor="basicinfo_authe" target="_blank" class="btn btn-authe fr mts mrm" stat="click|{area: basicinfo, item: lbc, kid: 1}" href="http://nlbc.baidu.com/lbs-lbc/index.action?uid=9d705f80a9f36ae0f03cba1f&amp;model=poi&amp;m=poi_add&amp;from=detailtop">
+                <i class="icon-authe icon-authe-identy"/>
+免费认领本店              </a>
+              <h1 monitor="basicinfo_title" class="mlm">
+北京鼓楼四合院家庭旅社              </h1>
+            </div>
+            <div id="shopInfoSlider" class="jscroll">
+              <a class="prev_disable">
+                <span>
+                </span>
+              </a>
+              <div class="body">
+                <ul class="items" style="width: 785px; left: 0px;">
+                  <li monitor="basicinfo_scroll" class="item">
+                    <a index="1">
+                      <img onerror="util.errorImg(this)" data-src="http://webmap3.map.bdimg.com/maps/services/thumbnails?width=200&amp;height=140&amp;quality=70&amp;src=http%3A%2F%2Ft11.baidu.com%2Fit%2Fu%3D2660230498%2C2625361846%26fm%3D22" onload="util.stretchImg(this,157,110,true)" src="bb.xx/thumbnails.jpeg"/>
+                    </a>
+                    <div class="title">
+                    </div>
+                  </li>
+                  <li monitor="basicinfo_scroll" class="item">
+                    <a index="2">
+                      <img onerror="util.errorImg(this)" data-src="http://webmap3.map.bdimg.com/maps/services/thumbnails?width=200&amp;height=140&amp;quality=70&amp;src=http%3A%2F%2Fuserimg.qunar.com%2Fimgs%2F201112%2F19%2F187PN0b1kYXMI9IP1720.jpg" onload="util.stretchImg(this,157,110,true)"/>
+                    </a>
+                    <div class="title">
+去哪儿                    </div>
+                  </li>
+                  <li monitor="basicinfo_scroll" class="item">
+                    <a index="3">
+                      <img onerror="util.errorImg(this)" data-src="http://webmap3.map.bdimg.com/maps/services/thumbnails?width=200&amp;height=140&amp;quality=70&amp;src=http%3A%2F%2Fuserimg.qunar.com%2Fimgs%2F201112%2F19%2F187PN0b1kYBO2KtO1720.jpg" onload="util.stretchImg(this,157,110,true)"/>
+                    </a>
+                    <div class="title">
+去哪儿                    </div>
+                  </li>
+                  <li monitor="basicinfo_scroll" class="item">
+                    <a index="4">
+                      <img onerror="util.errorImg(this)" data-src="http://webmap3.map.bdimg.com/maps/services/thumbnails?width=200&amp;height=140&amp;quality=70&amp;src=http%3A%2F%2Fuserimg.qunar.com%2Fimgs%2F201112%2F19%2F187PN0b1kY5SN6oG1720.jpg" onload="util.stretchImg(this,157,110,true)"/>
+                    </a>
+                    <div class="title">
+去哪儿                    </div>
+                  </li>
+                  <li monitor="basicinfo_scroll" class="item">
+                    <a index="5">
+                      <img onerror="util.errorImg(this)" data-src="http://webmap3.map.bdimg.com/maps/services/thumbnails?width=200&amp;height=140&amp;quality=70&amp;src=http%3A%2F%2Fuserimg.qunar.com%2Fimgs%2F201112%2F19%2F187PN0b1kYw0PlYI1720.jpg" onload="util.stretchImg(this,157,110,true)"/>
+                    </a>
+                    <div class="title">
+去哪儿                    </div>
+                  </li>
+                </ul>
+              </div>
+              <a class="next">
+                <span>
+                </span>
+              </a>
+            </div>
+            <div class="bd">
+              <div class="meta-basic">
+                <dl>
+                  <dt>
+                    <i class="icon-hotel icon-hotel-phone icon-meta"/>
+电话:                   </dt>
+                  <dd>
+(010)84028732                  </dd>
+                </dl>
+                <dl>
+                  <dt>
+                    <i class="icon-hotel icon-hotel-address icon-meta"/>
+地址:                   </dt>
+                  <dd>
+安定门内大街花园东巷31号                  </dd>
+                </dl>
+              </div>
+              <div class="rcmd-rate">
+                <div class="rcmd-rate-score">
+                  <div>
+                    <span class="f18 fcg">
+暂无评论信息                    </span>
+                  </div>
+                </div>
+                <div class="rcmd-rate-histogram">
+                  <div class="histogram">
+                    <div class="histogram-content">
+                      <img title="暂无" height="60" alt="暂无" src="bb.xx/transparent_3254726.gif"/>
+                    </div>
+                    <div class="histogram-info">
+                      <span>
+推荐                      </span>
+                    </div>
+                  </div>
+                  <div class="histogram histogram-space">
+                  </div>
+                  <div class="histogram">
+                    <div class="histogram-content">
+                      <img title="暂无" height="60" alt="暂无" src="bb.xx/transparent_3254726_1.gif"/>
+                    </div>
+                    <div class="histogram-info">
+                      <span>
+不推荐                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+<!--widget信息来源-->            <div class="partnernav">
+信息来源：              <a href="http://map.baidu.com/detail?qt=ur&amp;url=http%3A%2F%2Fuser.qunar.com%2FuserExt%2FbaiduLBS.jsp%3Furl%3Dhttp%253A%252F%252Fuser.qunar.com%252FuserExt%252FbaiduLBS.jsp%253Furl%253Dhttp%25253A%25252F%25252Fhotel.qunar.com%25252Fcity%25252Fbeijing_city%25252Fdt-14128%25252F%252523ex_track%25253Dbd_ditu&amp;from=inf&amp;category=hotel&amp;area=basic&amp;fun=qunar" target="_blank" style="background-image:url(http://webmap2.map.bdimg.com/fwmap/upload/place/icon/qunar/16.png)" class="from">
+去哪儿              </a>
+            </div>
+          </div>
+<!-- widget ota预订 -->          <div id="otalist" class="otalist">
+            <div id="reservation">
+              <div id="search_tip2" class="search-tip2">
+              </div>
+              <div class="tit">
+在线预订              </div>
+              <div class="conn">
+                <div class="inputs">
+入住时间：                  <input stat="click|area:ota, item:date_start, kid: 1" monitor="ota_date_start" type="text" id="start_date" readonly="readonly" value="2013-12-17(周二)"/>
+离店时间：                  <input stat="click|area:ota, item:date_end, kid: 2" monitor="ota_date_end" type="text" id="end_date" readonly="readonly" value="2013-12-18(周三)"/>
+                  <a monitor="ota_date_select" href="javascript:void(0)" class="room-searchbtn">
+重新搜索                  </a>
+                </div>
+                <div id="search_tip" class="search-resulttips">
+                </div>
+              </div>
+            </div>
+            <div id="third_roomlistwarpId">
+            </div>
+            <div id="search_tip1" class="search-tip1 hide">
+            </div>
+            <div id="roomlistwarpId" class="roomlistwarp">
+              <div class="loadingwarp">
+                <div class="loading">
+                  <p>
+请稍等，正在为您搜索结果                  </p>
+                  <img alt="" src="bb.xx/loading_8f80da1.gif"/>
+                </div>
+                <div class="loading-tip">
+如果您在60秒后仍无法看到搜索结果，请同时按下键盘上的Ctrl+F5强制刷新页面                </div>
+              </div>
+            </div>
+            <div id="roomInfoSrc">
+              <div class="info-ref">
+信息来源：                <span>
+                  <img style="background-image:url(    http://map.baidu.com/fwmap/upload/place/icon/qunar/16.png);" class="icon-logo" src="bb.xx/transparent.gif"/>
+                  <a href="http://map.baidu.com/detail?qt=ur&amp;url=http%3A%2F%2Fuser.qunar.com%2FuserExt%2FbaiduLBS.jsp%3Furl%3Dhttp%253A%252F%252Fuser.qunar.com%252FuserExt%252FbaiduLBS.jsp%253Furl%253Dhttp%25253A%25252F%25252Fhotel.qunar.com%25252Fcity%25252Fbeijing_city%25252Fdt-14128%25252F%252523ex_track%25253Dbd_ditu&amp;from=inf&amp;category=hotel&amp;area=ota&amp;fun=qunar" target="_blank">
+去哪儿                  </a>
+                </span>
+                <span>
+请以供应商实际报价为准                </span>
+              </div>
+            </div>
+          </div>
+<!--banner--><!--widget  tabList-->          <div id="tabList" class="section-info tablist-info">
+            <div class="hd">
+              <ul id="photoTabs" class="tab">
+                <li class="tab-item" data-target="#hotelRoom" data="all">
+                  <a href="javascript:void(0)">
+客房                  </a>
+                </li>
+                <li class="divider"/>
+                <li class="tab-item" data-target="#hotelOther" data="other">
+                  <a href="javascript:void(0)">
+其他                  </a>
+                </li>
+                <li class="divider"/>
+              </ul>
+            </div>
+            <div class="bd" id="photoContainer">
+              <div id="hotelRoom" class="tab-list">
+              </div>
+              <div id="hotelOther" class="tab-list">
+              </div>
+            </div>
+          </div>
+<!--widget detailInfo -->          <div id="detailInfo" class="section-info detail-info">
+            <div monitor="detailinfo_title" class="hd">
+              <h2 class="hd-title">
+详细信息              </h2>
+            </div>
+            <div class="bd cater-detail" id="caterDetailInfo">
+              <dl>
+                <dt class="credit-card-title">
+                  <i class="icon-hotel icon-hotel-featrue icon-detail"/>
+                  <span>
+接受信用卡：                  </span>
+                </dt>
+                <dd class="credit-card">
+                </dd>
+              </dl>
+            </div>
+<!--widget信息来源-->            <div class="partnernav">
+信息来源：              <a href="http://map.baidu.com/detail?qt=ur&amp;url=http%3A%2F%2Fuser.qunar.com%2FuserExt%2FbaiduLBS.jsp%3Furl%3Dhttp%253A%252F%252Fuser.qunar.com%252FuserExt%252FbaiduLBS.jsp%253Furl%253Dhttp%25253A%25252F%25252Fhotel.qunar.com%25252Fcity%25252Fbeijing_city%25252Fdt-14128%25252F%252523ex_track%25253Dbd_ditu&amp;from=inf&amp;category=hotel&amp;area=detail&amp;fun=qunar" target="_blank" style="background-image:url(http://webmap2.map.bdimg.com/fwmap/upload/place/icon/qunar/16.png)" class="from">
+去哪儿              </a>
+            </div>
+          </div>
+<!-- widget评论 -->        </div>
+        <div id="RightDiv" class="side">
+          <div class="toolbar">
+            <a id="sendSms" class="t-sendsms" href="javascript:void(0)" title="发送到手机">
+发送到手机            </a>
+            <a id="print" class="t-print" href="javascript:void(0)" title="打印此点" onclick="window.print()">
+打印            </a>
+            <a href="javascript:void(0)" class="t-shareurl" title="将此点分享给好友" id="shareLink">
+分享            </a>
+          </div>
+          <textarea id="sendtomoTpl" style="display:none;">
+          </textarea>
+          <textarea id="shareTpl" style="display:none;">
+          </textarea>
+          <div class="place-scape">
+            <div id="place-scape">
+            </div>
+          </div>
+          <div class="map">
+            <div id="MapHolder" class="mapHolder" style="overflow: hidden; position: relative; z-index: 0; background-color: #F3F1EC; color: #000; text-align: left;">
+              <div style="overflow: visible; position: absolute; z-index: 0; left: 0px; top: 0px; cursor: -moz-grab;">
+                <div class="BMap_mask" style="position: absolute; left: 0px; top: 0px; z-index: 9; overflow: hidden; width: 1256px; height: 20px;">
+                </div>
+                <div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 200;">
+                  <div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 800;">
+                  </div>
+                  <div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 700;">
+                  </div>
+                  <div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 600;">
+                  </div>
+                  <div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 500;">
+                    <a href="javascript:void(0)" class="diy_marker_s" style="white-space: nowrap; mozuserselect: none; z-index: 0; left: 455px; top: -20px;" data-index="-7990382">
+                      <em class="marker_i marker_l"/>
+                      <em class="marker_i marker_c">
+                        <span>
+?68  北京鼓楼四合院家庭旅社                        </span>
+                      </em>
+                      <em class="marker_i marker_r"/>
+                      <em class="marker_bt"/>
+                    </a>
+                  </div>
+                  <div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 400;">
+                  </div>
+                  <div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 300;">
+                  </div>
+                  <div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 201;">
+                  </div>
+                  <div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 200;">
+                  </div>
+                </div>
+                <div style="position: absolute; overflow: visible; top: 0px; left: 0px; z-index: 1;">
+                  <div style="position: absolute; overflow: visible; z-index: -100; left: 628px; top: 10px; display: none;">
+                  </div>
+                </div>
+                <div style="position: absolute; overflow: visible; top: 0px; left: 0px; z-index: 2; display: block;">
+                </div>
+                <div style="position: absolute; overflow: visible; top: 0px; left: 0px; z-index: 3;">
+                </div>
+              </div>
+            </div>
+            <a href="javascript:void(0)" class="max" stat="click|{area:map,fun:icon_click}">
+            </a>
+            <div id="mapLoading" style="display: none;">
+              <img src="bb.xx/loading_50c5e3e.gif"/>
+            </div>
+          </div>
+          <div id="SwitchDiv" class="mod-info nav-map SwitchDiv">
+            <div class="nav-tabb">
+              <div class="nav_tab">
+                <div class="hover" id="nav_tab0">
+                  <font>
+到这里去                  </font>
+                </div>
+                <div class="" id="nav_tab1" style="border-left:1px solid #dadada;border-right:1px solid #dadada">
+                  <font>
+从这里出发                  </font>
+                </div>
+                <div class="" id="nav_tab2">
+                  <font>
+在附近找                  </font>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div id="NavDiv0" class="Switch_con" style="">
+                <div id="nearbyBus">
+                </div>
+                <span class="fo_1">
+起点：                  <input id="startPoint" type="text" class="Switch_input"/>
+                </span>
+                <span class="fo_2">
+                  <input type="button" id="botton_0" class="inputBtnBg" value="公交"/>
+                  <input type="button" id="botton_1" class="inputBtnBg" value="驾车"/>
+                </span>
+              </div>
+              <div id="NavDiv1" class="Switch_con" style="display: none;">
+                <span class="fo_1">
+                  <input id="endPoint" type="text" class="Switch_input"/>
+                </span>
+                <span class="fo_2">
+                  <input id="botton_2" class="inputBtnBg" type="button" value="公交"/>
+                  <input id="botton_3" type="button" class="inputBtnBg" value="驾车"/>
+                </span>
+              </div>
+              <div id="NavDiv2" class="Switch_con" style="display: none;">
+                <div class="Close_con" id="circle">
+                  <p class="Close_con_title bg_03">
+                    <span>
+                    </span>
+                    <a href="#" onclick="return false;">
+                    </a>
+                    <a href="#" onclick="return false;">
+                    </a>
+                    <a href="#" onclick="return false;">
+                    </a>
+                    <a href="#" onclick="return false;">
+                    </a>
+                    <a href="#" onclick="return false;">
+                    </a>
+                  </p>
+                  <p class="Close_con_title bg_00">
+                    <span>
+                    </span>
+                    <a href="#" onclick="return false;">
+                    </a>
+                    <a href="#" onclick="return false;">
+                    </a>
+                    <a href="#" onclick="return false;">
+                    </a>
+                    <a href="#" onclick="return false;">
+                    </a>
+                    <a href="#" onclick="return false;">
+                    </a>
+                  </p>
+                  <p class="Close_con_title bg_02">
+                    <span>
+                    </span>
+                    <a href="#" onclick="return false;">
+                    </a>
+                    <a href="#" onclick="return false;">
+                    </a>
+                    <a href="#" onclick="return false;">
+                    </a>
+                    <a href="#" onclick="return false;">
+                    </a>
+                    <a href="#" onclick="return false;">
+                    </a>
+                    <a href="#" onclick="return false;">
+                    </a>
+                    <a href="#" onclick="return false;">
+                    </a>
+                    <a href="#" onclick="return false;">
+                    </a>
+                  </p>
+                  <p class="Close_con_title bg_01">
+                    <span>
+                    </span>
+                    <a href="#" onclick="return false;">
+                    </a>
+                    <a href="#" onclick="return false;">
+                    </a>
+                    <a href="#" onclick="return false;">
+                    </a>
+                    <a href="#" onclick="return false;">
+                    </a>
+                    <a href="#" onclick="return false;">
+                    </a>
+                  </p>
+                </div>
+                <span class="fo_3" id="inputList">
+                  <input id="circleText" type="text" value="查找其他关键字" class="Switch_input1"/>
+                  <input type="button" id="searchNearBtn" class="inputBtnBg" value="搜索"/>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="nearby hide" id="nearbyBox">
+            <div class="mod-info hot-nearby">
+              <h2 class="f14 fwb mvm">
+                <a id="nearbyMore" class="nearbyMore" href="javascript:void(0);">
+更多>>                </a>
+附近的酒店推荐              </h2>
+              <ul id="nearby">
+              </ul>
+            </div>
+          </div>
+          <textarea class="hide" id="nearbyTpl">
+<& _.each(data, function(item, i){ &> <& if(i == data.length - 1){ &> <li class="mbm clearfix li-last"> <& }else{ &> <li class="mbm clearfix"> <& } &> <div class="fl"> <a stat="click|{area:nearby,kid:link,type:old}" href="<&= item.link &>" target="_blank" class="media"> <& if(!!item.image){ &> <img width="86" height="64" onerror="util.errorImg(this)" src="<&= 'http://webmap3.map.bdimg.com/maps/services/thumbnails?width=86&height=64&src='+encodeURIComponent(item.image) &>" alt="<&= item.name &>"/> <& }else{ &> <img width="86" height="64" src="http://webmap2.map.bdimg.com/static/hotel/images/nopic_96d29d1.gif"/> <& } &> </a> </div> <div class="fl"> <dl> <dt> <a stat="click|{area:nearby,kid:link,type:old}" href="<&= item.link &>" target="_blank" class="shop-name f14 ellipsis"><&= item.name &></a> </dt> <dd class="fcg7"> <& if(item.starwidth){ &> 推荐：<strong class="fsn"><&= item.starwidth &>%</strong> <& } else { &> 推荐：<strong class="fsn">暂无数据</strong> <& } &> </dd> <dd id="<&= __.utilDh(item).getString('realPrice.id') &>"> <& if(__.utilDh(item).getString('realPrice.price')){ &> 报价： <strong class="fcr fsn">?<&= __.utilDh(item).getString('realPrice.price') &>元</strong> <& } else if(item.price) { &> 人均： <strong class="fsn">?<&= item.price &>元</strong> <& } else { &> 暂无报价 <& } &> </dd> </dl> </div> <div class="fl clearfix"><i class="icon-hotel icon-hotel-address"></i>与当前地点直线距离约 <strong class="fcr fsn"><&= item.distance &>公里</strong> </div> </li> <& }); &>          </textarea>
+          <textarea class="hide" id="nearbyTpl-new">
+<& _.each(data, function(item, i){ &> <& if(i == data.length - 1){ &> <li class="mbm clearfix li-last"> <& }else{ &> <li class="mbm clearfix"> <& } &> <div class="fl"> <a stat="click|{area:nearby,kid:link,type:new,flag:<&= item.type &>}" href="<&= item.link &>" target="_blank" class="media"> <& if(!!item.image){ &> <img width="86" height="64" onerror="util.errorImg(this)" src="<&= 'http://webmap3.map.bdimg.com/maps/services/thumbnails?width=86&height=64&src='+encodeURIComponent(item.image) &>" alt="<&= item.hotel_name &>"/> <& }else{ &> <img width="86" height="64" src="http://webmap2.map.bdimg.com/static/hotel/images/nopic_96d29d1.gif"/> <& } &> </a> </div> <div class="fl"> <dl> <dt> <a stat="click|{area:nearby,kid:link,type:new,flag:<&= item.type &>}" href="<&= item.link &>" target="_blank" class="shop-name f14 ellipsis"><&= item.hotel_name &></a> </dt> <dd class="reason"> <& if(item.reason){ &> <strong class="fsn"><&= item.reason &></strong> <& } else { &> <strong class="fsn">暂无数据</strong> <& } &> </dd> <dd> <& if(item.price) { &> 报价： <strong class="fcr fsn">?<&= item.price &>元</strong> <& } else { &> 暂无报价 <& } &> </dd> </dl> </div> <div class="address-desc"> <i class="icon-hotel icon-hotel-address"></i>与当前地点直线距离约<strong class="fcr fsn"><&= item.distance &>公里</strong> </div> </li> <& }); &>          </textarea>
+          <div class="claim clearfix" id="identify_box">
+            <h2>
+本店未被认领            </h2>
+            <div class="claim-content clearfix">
+              <span>
+如果您是店主：              </span>
+              <a id="validate_url" onmousedown="addStat({item:'lbc'});" target="_blank" href="http://nlbc.baidu.com/lbs-lbc/index.action?uid=9d705f80a9f36ae0f03cba1f&amp;model=poi&amp;m=poi_add&amp;from=detailright" class="btn-claim">
+                <i class="icon-authe icon-authe-identy"/>
+免费认领本店              </a>
+            </div>
+          </div>
+          <div class="mapapp">
+            <a href="http://shouji.baidu.com/map/?from=1714" target="_blank">
+              <img alt="手机地图下载" width="274" src="bb.xx/pctomoicon_7ac4a72.png"/>
+            </a>
+          </div>
+        </div>
+        <a id="backTop" class="back-top hide" href="javascript:;">
+返回顶部        </a>
+      </div>
+      <div id="user_info">
+        <div id="login_user_info" style="display: none;">
+        </div>
+        <div id="logout_user_info">
+          <ul>
+            <li>
+              <a href="http://www.baidu.com" target="_blank">
+百度首页               </a>
+            </li>
+            <li class="line">
+|            </li>
+            <li>
+              <a id="login" href="javascript:void(0);">
+ 登录              </a>
+              <a href="https://passport.baidu.com/v2/?reg&amp;regType=1&amp;tpl=ma" target="_blank">
+注册              </a>
+            </li>
+            <li class="line">
+|            </li>
+            <li class="book-order">
+              <a class="action" href="javascript:void(0);">
+ 订单查询              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+<!-- 地图专题活动脚本 --><!-- hunter统计，不要删除 -->      <div id="baiducopy" class="footer">
+        <p>
+? 2013 Baidu          <a href="http://www.baidu.com/duty/" target="_blank">
+使用百度前必读          </a>
+          <a href="http://qingting.baidu.com/index?pid=36" target="_blank">
+问题反馈          </a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
