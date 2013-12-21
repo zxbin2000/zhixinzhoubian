@@ -117,10 +117,10 @@ public class PoiSearchTool {
 			String latitude, String longitude, String radius, String ak, String scope, int recordMax) {
 		SearchQueryObject obj0 = getPoiSearchResult(query, tag, industry_type,
 				sort_name, sort_rule, price_section, groupon, discount,
-				page_size, "0", region, latitude, longitude, radius, ak, scope);
+				(Integer.parseInt(page_size)>recordMax)?recordMax+"":page_size, "0", region, latitude, longitude, radius, ak, scope);
 		if (obj0 != null && obj0.status == 0) {
 			int page_from = 1;
-			recordMax = obj0.total>recordMax?recordMax:obj0.total + (((recordMax>Integer.parseInt(page_size))&&(recordMax%Integer.parseInt(page_size)!=0))?1:0);
+			recordMax = obj0.total>recordMax?recordMax:obj0.total;
 			int page_to = recordMax / Integer.parseInt(page_size) + (((recordMax>Integer.parseInt(page_size))&&(recordMax%Integer.parseInt(page_size)!=0))?1:0);
 			SearchQueryObject tmpQueryObject;
 			for (int i = page_from; i < page_to; i++) {

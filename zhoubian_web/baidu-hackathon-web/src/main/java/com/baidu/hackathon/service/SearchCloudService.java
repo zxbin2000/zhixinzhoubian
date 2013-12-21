@@ -161,7 +161,7 @@ public class SearchCloudService {
 			index = new UserIndex();
 			index.setName(item.getTitle());
 			index.setUid(item.getUid() + "");
-			index.setTagList(Arrays.asList(item.getTags().split(",")));
+			index.setTagList(Arrays.asList(item.getTags().split(" ")));
 			lists.add(index);
 		}
 		return lists;

@@ -7,7 +7,6 @@ import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
-
 import com.baidu.hackathon.domain.PoiCreateStatusObj;
 import com.baidu.hackathon.domain.SearchForUI;
 import com.baidu.hackathon.domain.SearchForUIData;
@@ -30,8 +29,16 @@ public class MapSearchService {
 		
 		//搜索附近信息，data字段数据不进行排序	
 		public SearchForUI getNearByInfo(String latitude, String longitude, String scope, String tags) {
-			SearchForUI cloudObj = searchCloudService.CloudSearchForUi(longitude, latitude, scope, tags, cloudmax);
-			SearchForUI searchObj = searchPoiService.GetPoiResultForUI(tags, latitude, longitude, scope, poimax);
+			SearchForUI cloudObj = new SearchForUI();
+			for(String tag : tags.split(" ")) {
+				SearchForUI tmpcloudObj = searchCloudService.CloudSearchForUi(longitude, latitude, scope, tag, cloudmax/tags.split(" ").length + 1);
+				cloudObj.getData().addAll(tmpcloudObj.getData());
+			}
+			SearchForUI searchObj = new SearchForUI();
+			for(String tag : tags.split(" ")) {
+				SearchForUI tmpsearchObj = searchPoiService.GetPoiResultForUI(tag, latitude, longitude, scope, poimax/tags.split(" ").length + 1);
+				searchObj.getData().addAll(tmpsearchObj.getData());
+			}
 			cloudObj.getData().addAll(searchObj.getData());
 			return cloudObj;
 		}
@@ -104,7 +111,6 @@ public class MapSearchService {
 			int rpCount = (relatedValue.size()<rpcloudmax)?relatedValue.size():rpcloudmax;
 			for(int i=0; i<rpCount; i++) {
 				rpdata.add(rpResultMap.get(relatedValue.get(i).getKey()));
-				System.out.println(relatedValue.get(i).getKey() + ":" + relatedValue.get(i).getValue());
 			}
 			obj.setData(rpdata);
 			return obj;

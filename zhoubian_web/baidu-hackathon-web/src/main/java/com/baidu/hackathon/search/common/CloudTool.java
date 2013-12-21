@@ -174,7 +174,7 @@ public class CloudTool {
 			int recordMax, String region, int searchType) {
 		CloudSearchObj obj0 = CloudTool.cloudInterfaceForOriginalPoiData(
 				latitude, longitude, radius, userId, messageType, tags, now,
-				page_size, "0", region, searchType, "");
+				(Integer.parseInt(page_size)>recordMax)?recordMax+"":page_size, "0", region, searchType, "");
 		if (obj0 != null && obj0.status == 0) {
 			int page_from = 1;
 			recordMax = obj0.total > recordMax ? recordMax : obj0.total;

@@ -46,6 +46,7 @@ public class SearchPoiService {
 		List<UserIndex> poiList = new ArrayList<UserIndex>();
 		for(SearchResult result:results) {
 			if(result.getDetail_info().getTag()==null) {
+				result.getDetail_info().setTag("");
 				continue;
 			}
 			UserIndex userIndex = new UserIndex();

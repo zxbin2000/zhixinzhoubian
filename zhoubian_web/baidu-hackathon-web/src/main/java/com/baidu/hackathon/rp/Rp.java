@@ -16,26 +16,16 @@ public class Rp {
 		{
 			String tag = u1.tagList.get(i);
 			List<String> simList = Global.TagArray.get(tag);
+			if(simList==null)
+				continue;
 			for(String u2tag: u2.tagList) {
 				for(String childTag : simList) {
-					if(u2tag.indexOf(childTag)>0) {
+					if(u2tag.indexOf(childTag)>=0) {
 						res++;
 						break;
 					}
 				}
 			}
-//			for(int k=0;k<simList.size();k++)
-//			{
-//				String simTag = simList.get(k);
-//				for(int m=0;m<u2.tagList.size();m++)
-//				{
-//					String tmp = u2.tagList.get(m);
-//					if(tmp.indexOf(simTag)>0)
-//					{
-//						res++;
-//					}
-//				}
-//			}
 		}
 		return res;
 	}
@@ -44,7 +34,7 @@ public class Rp {
 	{
 		List<String> tagList1 = u1.tagList;
 		List<String> tagList2 = u2.tagList;
-		double sum = Math.sqrt((double)tagList1.size())*Math.sqrt((double)tagList2.size());
+		double sum = (double)tagList2.size() + (double)tagList1.size();
 		int union_num = getUnionNum(u1,u2);
 		return union_num/sum;
 	}
