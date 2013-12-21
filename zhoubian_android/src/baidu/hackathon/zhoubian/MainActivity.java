@@ -39,6 +39,7 @@ import com.baidu.mapapi.map.MapView;
 import com.baidu.mapapi.map.MyLocationOverlay;
 import com.baidu.mapapi.map.OverlayItem;
 import com.baidu.platform.comapi.basestruct.GeoPoint;
+import com.zhixinzhoubian.ui.R;
 
 public class MainActivity extends Activity {
 
