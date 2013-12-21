@@ -239,7 +239,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>margin</code></td><td>0</td><td></td></tr>
 <tr><td><code>fullscreen</code></td><td>1</td><td></td></tr>
 </table>
-          @attr name com.zhixinzhoubian.ui:aboveTouchMode
+          @attr name android:aboveTouchMode
         */
         public static final int SlidingMenu_aboveTouchMode = 5;
         /**
@@ -253,7 +253,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.zhixinzhoubian.ui:behindFadeDegree
+          @attr name android:behindFadeDegree
         */
         public static final int SlidingMenu_behindFadeDegree = 10;
         /**
@@ -267,7 +267,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.zhixinzhoubian.ui:behindFadeEnabled
+          @attr name android:behindFadeEnabled
         */
         public static final int SlidingMenu_behindFadeEnabled = 9;
         /**
@@ -283,7 +283,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.zhixinzhoubian.ui:behindOffset
+          @attr name android:behindOffset
         */
         public static final int SlidingMenu_behindOffset = 2;
         /**
@@ -297,7 +297,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.zhixinzhoubian.ui:behindScrollScale
+          @attr name android:behindScrollScale
         */
         public static final int SlidingMenu_behindScrollScale = 4;
         /**
@@ -314,7 +314,7 @@ containing a value of this type.
 <tr><td><code>margin</code></td><td>0</td><td></td></tr>
 <tr><td><code>fullscreen</code></td><td>1</td><td></td></tr>
 </table>
-          @attr name com.zhixinzhoubian.ui:behindTouchMode
+          @attr name android:behindTouchMode
         */
         public static final int SlidingMenu_behindTouchMode = 6;
         /**
@@ -330,7 +330,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.zhixinzhoubian.ui:behindWidth
+          @attr name android:behindWidth
         */
         public static final int SlidingMenu_behindWidth = 3;
         /**
@@ -340,7 +340,7 @@ containing a value of this type.
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.zhixinzhoubian.ui:selectorDrawable
+          @attr name android:selectorDrawable
         */
         public static final int SlidingMenu_selectorDrawable = 12;
         /**
@@ -354,7 +354,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.zhixinzhoubian.ui:selectorEnabled
+          @attr name android:selectorEnabled
         */
         public static final int SlidingMenu_selectorEnabled = 11;
         /**
@@ -364,7 +364,7 @@ containing a value of this type.
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.zhixinzhoubian.ui:shadowDrawable
+          @attr name android:shadowDrawable
         */
         public static final int SlidingMenu_shadowDrawable = 7;
         /**
@@ -380,7 +380,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.zhixinzhoubian.ui:shadowWidth
+          @attr name android:shadowWidth
         */
         public static final int SlidingMenu_shadowWidth = 8;
         /**
@@ -390,7 +390,7 @@ containing a value of this type.
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.zhixinzhoubian.ui:viewAbove
+          @attr name android:viewAbove
         */
         public static final int SlidingMenu_viewAbove = 0;
         /**
@@ -400,7 +400,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.zhixinzhoubian.ui:viewBehind
+          @attr name android:viewBehind
         */
         public static final int SlidingMenu_viewBehind = 1;
     };
