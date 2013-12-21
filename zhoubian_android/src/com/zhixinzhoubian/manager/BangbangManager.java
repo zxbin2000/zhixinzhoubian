@@ -246,7 +246,7 @@ public class BangbangManager {
 			event.setReturnCode(response.getReturnCode());
 			event.setMessage(response.getMessage());
 			Bundle bundle = new Bundle();
-			bundle.putParcelableArrayList("messages", (ArrayList<? extends Parcelable>) response.getmMessages());
+			bundle.putParcelableArrayList("messages", (ArrayList<? extends Parcelable>) response.getMessages());
 			event.setData(bundle);
 			EventBus.getDefault().post(event);
 		}
