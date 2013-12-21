@@ -7,8 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
-import baidu.hackathon.zhoubian.R;
 
+import com.baidu.zhixinzhoubian.ui.R;
 import com.slidingmenu.lib.SlidingMenu;
 
 public class SlidingActivityHelper {

@@ -1,4 +1,4 @@
-package com.baidu.zhixinzhoubian;
+package com.baidu.zhixinzhoubian.ui;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup.LayoutParams;
 
 import com.baidu.zhixinzhoubian.manager.BangbangEvent;
-import com.baidu.zhixinzhoubian.ui.R;
 import com.slidingmenu.lib.SlidingMenu;
 import com.slidingmenu.lib.app.SlidingActivityHelper;
 import com.slidingmenu.lib.app.SlidingFragmentActivity;

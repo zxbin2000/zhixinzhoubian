@@ -29,8 +29,8 @@ import android.view.animation.Interpolator;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.Scroller;
-import baidu.hackathon.zhoubian.R;
 
+import com.baidu.zhixinzhoubian.ui.R;
 import com.slidingmenu.lib.SlidingMenu.AboveTouchInterceptor;
 import com.slidingmenu.lib.SlidingMenu.OnClosedListener;
 import com.slidingmenu.lib.SlidingMenu.OnOpenedListener;
