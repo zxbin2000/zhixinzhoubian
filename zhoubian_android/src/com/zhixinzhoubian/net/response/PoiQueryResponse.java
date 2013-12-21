@@ -6,14 +6,14 @@ import com.zhixinzhoubian.model.PoiMessage;
 
 public class PoiQueryResponse extends ResponseBase{
 
-	private List<PoiMessage> mMessages = null;
-
-	public List<PoiMessage> getmMessages() {
-		return mMessages;
+	public List<PoiMessage> getMessages() {
+		return Messages;
 	}
 
-	public void setmMessages(List<PoiMessage> mMessages) {
-		this.mMessages = mMessages;
+	public void setMessages(List<PoiMessage> messages) {
+		Messages = messages;
 	}
-	
+
+	private List<PoiMessage> Messages = null;
+
 }

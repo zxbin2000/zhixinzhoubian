@@ -2,14 +2,14 @@ package com.zhixinzhoubian.net.response;
 
 public class UpdateUserInfoResponse extends ResponseBase{
 
-	private long userId = -1L;
+	private long data = -1L;
 
-	public long getUserId() {
-		return userId;
+	public long getData() {
+		return data;
 	}
 
-	public void setUserId(long userId) {
-		this.userId = userId;
+	public void setData(long data) {
+		this.data = data;
 	}
-	
+
 }

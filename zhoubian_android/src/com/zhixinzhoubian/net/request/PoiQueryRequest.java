@@ -4,7 +4,7 @@ public class PoiQueryRequest {
 
 	private long userId = -1L;
 
-	private double langX = 0.0d;
+	private double lngX = 0.0d;
 
 	private double latY = 0.0d;
 
@@ -20,12 +20,12 @@ public class PoiQueryRequest {
 		this.userId = userId;
 	}
 
-	public double getLangX() {
-		return langX;
+	public double getLngX() {
+		return lngX;
 	}
 
-	public void setLangX(double langX) {
-		this.langX = langX;
+	public void setLngX(double lngX) {
+		this.lngX = lngX;
 	}
 
 	public double getLatY() {

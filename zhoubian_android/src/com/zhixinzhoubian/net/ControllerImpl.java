@@ -56,11 +56,9 @@ public class ControllerImpl implements IRequestController {
 		String responseString = BaiduHttpClient.INSTANCE.doPostJSON(
 				UrlResources.BASE_URL + UrlResources.ACTION_SAVE_USER,
 				jsonString);
-
 		UpdateUserInfoResponse response = mGson.fromJson(responseString,
 				new TypeToken<UpdateUserInfoResponse>() {
 				}.getType());
-
 		return response;
 	}
 
@@ -102,6 +100,7 @@ public class ControllerImpl implements IRequestController {
 	public PoiQueryResponse searchPoiMessages(PoiQueryRequest request) {
 		// TODO Auto-generated method stub
 		String jsonString = mGson.toJson(request, PoiQueryRequest.class);
+		Log.e("error", "searchPoiMessages:"+jsonString);
 
 		String responseString = BaiduHttpClient.INSTANCE.doPostJSON(
 				UrlResources.BASE_URL + UrlResources.ACTION_SEARCH_POI,

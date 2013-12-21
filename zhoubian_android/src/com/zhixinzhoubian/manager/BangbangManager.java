@@ -37,6 +37,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.os.Parcelable;
 import android.os.UserHandle;
+import android.util.Log;
 import android.view.Display;
 
 import com.zhixinzhoubian.model.PoiMessage;
@@ -97,7 +98,7 @@ public class BangbangManager {
 				request.setTelephone(telphone);
 				request.setUserId(userId);
 				DeviceUuidFactory factory = new DeviceUuidFactory(context);
-				request.setDiviceId(factory.getDeviceUuid().toString());
+				request.setDeviceId(factory.getDeviceUuid().toString());
 				UpdateUserInfoResponse response =  mController.saveUserInfo(request);
 				
 				mCallbackListener.onFinishedSaveUserInfo(response);
@@ -161,11 +162,12 @@ public class BangbangManager {
 			public void run() {
 				PoiQueryRequest request = new PoiQueryRequest();
 				request.setUserId(userId);
-				request.setLangX(langX);
-				request.setLangX(latY);
+				request.setLngX(langX);
+				request.setLatY(latY);
 				request.setDistance(distance);
 				request.setTagList(tagList);
 				PoiQueryResponse response =  mController.searchPoiMessages(request);
+				Log.d("miaolong:searchPoiMessages", response.toString());
 				mCallbackListener.onFinishedsearchPoiMessages(response);
 			}
 			
@@ -290,7 +292,7 @@ public class BangbangManager {
 			event.setReturnCode(response.getReturnCode());
 			event.setMessage(response.getMessage());
 			Bundle bundle = new Bundle();
-			bundle.putLong("userId", response.getUserId());
+			bundle.putLong("userId", response.getData());
 			event.setData(bundle);
 			EventBus.getDefault().post(event);
 		}

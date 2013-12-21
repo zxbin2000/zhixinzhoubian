@@ -20,7 +20,7 @@ public class UpdateUserInfoRequest {
 	/**
 	 * 设备UUID
 	 */
-	private String diviceId = null;
+	private String deviceId = null;
 
 	
 	
@@ -48,12 +48,12 @@ public class UpdateUserInfoRequest {
 		this.telephone = telephone;
 	}
 
-	public String getDiviceId() {
-		return diviceId;
+	public String getDeviceId() {
+		return deviceId;
 	}
 
-	public void setDiviceId(String diviceId) {
-		this.diviceId = diviceId;
+	public void setDeviceId(String diviceId) {
+		this.deviceId = diviceId;
 	}
 	
 	

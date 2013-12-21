@@ -10,6 +10,7 @@ import android.widget.EditText;
 
 import com.zhixinzhoubian.manager.BangbangEvent;
 import com.zhixinzhoubian.manager.BangbangManager;
+import com.zhixinzhoubian.model.PoiMessage;
 
 import de.greenrobot.event.EventBus;
 
@@ -50,7 +51,21 @@ public class RegisterActivity extends Activity {
 		});
 		*/
 		BangbangManager manager = BangbangManager.getInstance();
-		manager.updateUserInfo(RegisterActivity.this, 99999999L, "我是大神", "18612291961");
+//		manager.updateUserInfo(RegisterActivity.this, 99999999L, "我是大神", "18612291961");
+
+		
+		//		int[] tags = new int[1];
+//		tags[0]=1;
+//		manager.subscribeUserInterest(RegisterActivity.this, 11L, tags, 1000, 1);
+		
+		int[] tags = new int[1];
+		tags[0]=1;
+		manager.searchPoiMessages(RegisterActivity.this, 11L, 116.403725,39.91577, 1000, tags);
+		
+		
+		//manager.publishPoiInformation(RegisterActivity.this, 11L, "我发布的第一条需求", "http://su.bdimg.com/static/superpage/img/logo_white.png", PoiMessage.MessageType.REQUIREMENT, "美食", 116.403725, 39.91577, 1000, 1536);
+		
+		
 		
 	}
 
