@@ -1,5 +1,6 @@
 package com.baidu.hackathon.web;
 
+import java.lang.reflect.Type;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -16,10 +17,12 @@ import com.baidu.hackathon.domain.BaseResult;
 import com.baidu.hackathon.domain.PoiSearchParam;
 import com.baidu.hackathon.domain.SearchForUI;
 import com.baidu.hackathon.domain.SearchForUIData;
+import com.baidu.hackathon.search.common.PoiTag;
 import com.baidu.hackathon.search.constant.ReturnCode;
 import com.baidu.hackathon.service.MapSearchService;
 import com.baidu.hackathon.utils.HttpUtils;
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 @Controller
 @RequestMapping("/poiSearch")
@@ -50,11 +53,17 @@ public class SearchController {
 		String latY = String.valueOf(params.getLatY());
 		String lngX = String.valueOf(params.getLngX());
 		String scope = String.valueOf(params.getDistance());
-		SearchForUI searchResult = mapSearchService.getNearByInfo(latY, lngX, scope, params.getTags());
+		StringBuilder builder = new StringBuilder();
+		for(int tag : params.getTagList()) {
+			builder.append(PoiTag.getPoiValue(tag));
+			builder.append(" ");
+		}
+		SearchForUI searchResult = mapSearchService.getNearByInfo(latY, lngX, scope, builder.toString());
 		result.setCode(ReturnCode.SUCCESS);
 		result.setMessage("success");
 		result.setData(searchResult.getData());
-		return gson.toJson(result);
+		Type type = new TypeToken<BaseResult<List<SearchForUIData>>>(){}.getType();
+		return gson.toJson(result, type);
 	}
 
 

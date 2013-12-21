@@ -6,7 +6,7 @@ public class PoiSearchParam {
 	private Double lngX;
 	private Double latY;
 	private int distance;
-	private String tags;
+	private int[] tagList;
 	
 	public String getUserId() {
 		return userId;
@@ -32,11 +32,11 @@ public class PoiSearchParam {
 	public void setDistance(int distance) {
 		this.distance = distance;
 	}
-	public String getTags() {
-		return tags;
+	public int[] getTagList() {
+		return tagList;
 	}
-	public void setTags(String tags) {
-		this.tags = tags;
+	public void setTagList(int[] tagList) {
+		this.tagList = tagList;
 	}
 
 }
