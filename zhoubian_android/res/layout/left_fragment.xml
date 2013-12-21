@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/menu_frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/global_bg_color" >
+
+    <LinearLayout
+        android:id="@+id/top_area"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/tab_bg"
+            android:gravity="center_vertical"
+            >
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                />
+
+            <TextView
+                android:id="@+id/nickName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="郭美美"
+                style="@style/label_dark"
+                android:layout_marginLeft="10dp"
+                />
+
+            <ImageView
+                android:id="@+id/eidtProfile"
+                android:layout_width="30dp"
+                android:layout_height="30dp" 
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_marginLeft="100dp"
+                android:background="@drawable/icon_pencil"
+                />
+            
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/distance_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/label_light"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+
+            android:text="推荐距离"
+             />
+
+        <SeekBar
+            android:id="@+id/distance_seek"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:maxHeight="10.0dip"
+            android:minHeight="8.0dip"
+            android:paddingLeft="16dip"
+            android:paddingRight="16dip"
+            style="@style/seek_bar"
+            />
+
+        <TextView
+            style="@style/label_light"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/frequncy_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:text="更新时间"/>
+
+        <SeekBar
+            android:id="@+id/frequency_seek"
+            style="@style/seek_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:paddingLeft="16dip"
+            android:paddingRight="16dip" />
+
+        <TextView
+            style="@style/label_light"
+            android:text="订阅类型"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/subscriptions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/left_tag_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom_area"
+        android:layout_below="@+id/top_area" >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/subscriptions_tags"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+                </TextView>
+
+                <GridView
+                    android:id="@+id/tag_grid"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+                </GridView>
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <Button
+            android:id="@+id/my_requirement"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+        </Button>
+
+        <Button
+            android:id="@+id/my_service"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+        </Button>
+    </LinearLayout>
+
+</RelativeLayout>

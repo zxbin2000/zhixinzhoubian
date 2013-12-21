@@ -1,19 +1,12 @@
 package com.zhixinzhoubian.ui;
 
-
-
 import android.os.Bundle;
+import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
-import android.view.KeyEvent;
-import android.view.View;
-import android.view.ViewGroup.LayoutParams;
 
 import com.slidingmenu.lib.SlidingMenu;
-import com.slidingmenu.lib.app.SlidingActivityHelper;
 import com.slidingmenu.lib.app.SlidingFragmentActivity;
 import com.zhixinzhoubian.manager.BangbangEvent;
-
-import de.greenrobot.event.EventBus;
 
 public class MainActivity extends SlidingFragmentActivity
 		implements
@@ -22,24 +15,45 @@ public class MainActivity extends SlidingFragmentActivity
 			SlidingMenu.OnPageScrolledListener {
 
 	private static final String TAG = "MainActivity";
-	
-	private SlidingActivityHelper mHelper;
 
-	private EventBus eventBus = EventBus.getDefault();
-	
+	private LeftFragment mLeftFragment;
+	private TestFragment mTestFragment;
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		mHelper = new SlidingActivityHelper(this);
-		mHelper.onCreate(savedInstanceState);
-
-		setContentView(R.layout.activity_main);
-
+		setContentView(R.layout.content_frame);
 		setupViews();
+
+		// init fragment
+		mLeftFragment = new LeftFragment();
+		mTestFragment = new TestFragment();
+
 		getSlidingMenu().setOnOpenedListener(this);
 		getSlidingMenu().setOnClosedListener(this);
-		
-		eventBus.register(this);
+
+		setBehindContentView(R.layout.left_fragment);
+		FragmentTransaction t = this.getSupportFragmentManager().beginTransaction();
+		t.replace(R.id.menu_frame, mLeftFragment);
+		t.commit();
+
+		FragmentTransaction t2 = getSupportFragmentManager().beginTransaction();
+		t2.setCustomAnimations(R.anim.in_from_right, R.anim.out_to_left);
+		t2.replace(R.id.content_frame, mTestFragment).commitAllowingStateLoss();
+
+	}
+
+	public void onEventMainThread(BangbangEvent event) {
+
+		switch (event.getId()) {
+
+			case BangbangEvent.EVENT_ID.ACTION_UPDATE_USER_INFO :
+
+				Log.i(TAG, "event in activity:" + event);
+				break;
+
+		}
+
 	}
 
 	private void setupViews() {
@@ -60,76 +74,6 @@ public class MainActivity extends SlidingFragmentActivity
 	}
 
 	@Override
-	public void onPostCreate(Bundle savedInstanceState) {
-		super.onPostCreate(savedInstanceState);
-		mHelper.onPostCreate(savedInstanceState);
-	}
-
-	@Override
-	public View findViewById(int id) {
-		View v = super.findViewById(id);
-		if (v != null)
-			return v;
-		return mHelper.findViewById(id);
-	}
-
-	@Override
-	public void setContentView(int id) {
-		setContentView(getLayoutInflater().inflate(id, null));
-	}
-
-	@Override
-	public void setContentView(View v) {
-		setContentView(v, new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
-	}
-
-	@Override
-	public void setContentView(View v, LayoutParams params) {
-		super.setContentView(v, params);
-		mHelper.registerAboveContentView(v, params);
-	}
-
-	public void setBehindContentView(int id) {
-		setBehindContentView(getLayoutInflater().inflate(id, null));
-	}
-
-	public void setBehindContentView(View v) {
-		setBehindContentView(v, new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
-	}
-
-	public void setBehindContentView(View v, LayoutParams params) {
-		mHelper.setBehindContentView(v, params);
-	}
-
-	public SlidingMenu getSlidingMenu() {
-		return mHelper.getSlidingMenu();
-	}
-
-	public void toggle() {
-		mHelper.toggle();
-	}
-
-	public void showAbove() {
-		mHelper.showAbove();
-	}
-
-	public void showBehind() {
-		mHelper.showBehind();
-	}
-
-	public void setSlidingActionBarEnabled(boolean b) {
-		mHelper.setSlidingActionBarEnabled(b);
-	}
-
-	@Override
-	public boolean onKeyUp(int keyCode, KeyEvent event) {
-		boolean b = mHelper.onKeyUp(keyCode, event);
-		if (b)
-			return b;
-		return super.onKeyUp(keyCode, event);
-	}
-
-	@Override
 	public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
 	}
@@ -144,24 +88,4 @@ public class MainActivity extends SlidingFragmentActivity
 
 	}
 
-	@Override
-	protected void onDestroy() {
-		super.onDestroy();
-		eventBus.unregister(this);
-	}
-
-	 public void onEventMainThread(BangbangEvent event) {
-		 
-		 switch(event.getId()){
-			 
-			 case BangbangEvent.EVENT_ID.ACTION_UPDATE_USER_INFO:
-				 
-				 Log.i(TAG, "event in activity:"+event);
-				 break;
-				 
-		 }
-		 
-		 
-	 }
-	
 }
