@@ -2,11 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-<<<<<<< HEAD
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-=======
->>>>>>> 7bd719bd1e9818e9924c9e3bf6154f7ec963e9cd
     tools:context=".MainActivity" >
 
     <com.baidu.mapapi.map.MapView android:id="@+id/bmapView"
