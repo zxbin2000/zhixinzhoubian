@@ -8,8 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
 
-import com.baidu.zhixinzhoubian.ui.R;
 import com.slidingmenu.lib.SlidingMenu;
+import com.zhixinzhoubian.ui.R;
 
 public class SlidingActivityHelper {
 

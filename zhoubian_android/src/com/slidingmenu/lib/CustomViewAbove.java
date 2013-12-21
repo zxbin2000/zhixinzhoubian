@@ -30,10 +30,10 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.Scroller;
 
-import com.baidu.zhixinzhoubian.ui.R;
 import com.slidingmenu.lib.SlidingMenu.AboveTouchInterceptor;
 import com.slidingmenu.lib.SlidingMenu.OnClosedListener;
 import com.slidingmenu.lib.SlidingMenu.OnOpenedListener;
+import com.zhixinzhoubian.ui.R;
 //import com.slidingmenu.lib.SlidingMenu.OnCloseListener;
 //import com.slidingmenu.lib.SlidingMenu.OnOpenListener;
 
