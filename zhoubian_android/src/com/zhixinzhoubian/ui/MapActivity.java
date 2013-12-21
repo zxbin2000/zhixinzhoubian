@@ -39,6 +39,9 @@ import com.baidu.mapapi.map.MapView;
 import com.baidu.mapapi.map.MyLocationOverlay;
 import com.baidu.mapapi.map.OverlayItem;
 import com.baidu.platform.comapi.basestruct.GeoPoint;
+import com.zhixinzhoubian.manager.BangbangManager;
+
+import de.greenrobot.event.EventBus;
 
 public class MapActivity extends Activity {
 
@@ -174,7 +177,7 @@ public class MapActivity extends Activity {
 		mAccelerometer = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
 		mMageticField = mSensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD);
 		
-		CloudManager.getInstance().init(cloudListener);
+		EventBus.getDefault().register(this);
 	}
 	
 	/**
@@ -211,17 +214,14 @@ public class MapActivity extends Activity {
 				mLocationClient.requestLocation();
 				break;
 			case R.id.btnPoiSearch:
-				NearbySearchInfo info = new NearbySearchInfo();
-				info.ak = "D9ace96891048231e8777291cda45ca0";
-				info.geoTableId = 32038;
-				info.filter="time:20130801,20130810";
-				info.location = "116.307347,40.057132";
-				info.radius = 30000;
-				CloudManager.getInstance().nearbySearch(info);
+				long userId = 11L;
+				int distance = 1000;
+				int[] tags = {1,2};
+				BangbangManager manager = BangbangManager.getInstance();
+				manager.searchPoiMessages(MapActivity.this, 11L, mDefLng, mDefLat, distance, tags);
 				break;
 			}
 		}
-		
 	};
 	
 	@Override
