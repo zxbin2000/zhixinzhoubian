@@ -135,7 +135,7 @@ public enum BaiduHttpClient {
 	}
 
 
-	public String doPostJSON(String url, JSONObject json) {
+	public String doPostJSON(String url, String json) {
 		String result = "";
 		HttpClient httpClient = new DefaultHttpClient();
 		try {
@@ -144,7 +144,7 @@ public enum BaiduHttpClient {
 			HttpPost httpPost = new HttpPost(url);
 			httpPost.addHeader("content-type", "application/json");
 			if (json != null) {
-				StringEntity httpEntity = new StringEntity(json.toString(), "UTF-8");
+				StringEntity httpEntity = new StringEntity(json, "UTF-8");
 				httpPost.setEntity(httpEntity);
 			}
 			HttpResponse response = httpClient.execute(httpPost);

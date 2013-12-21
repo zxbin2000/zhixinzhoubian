@@ -2,6 +2,8 @@ package com.zhixinzhoubian.net;
 
 
 
+import java.util.List;
+
 import com.zhixinzhoubian.net.request.GetFeedbackResquest;
 import com.zhixinzhoubian.net.request.GetMyPoiMessageRequest;
 import com.zhixinzhoubian.net.request.InterestSubscribeRequest;

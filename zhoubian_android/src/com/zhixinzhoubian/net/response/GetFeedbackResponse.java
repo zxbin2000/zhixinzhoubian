@@ -1,52 +1,25 @@
 package com.zhixinzhoubian.net.response;
 
+import java.util.List;
+import com.zhixinzhoubian.model.FeedbackItem;
+
 public class GetFeedbackResponse extends ResponseBase{
-
-	private long userId = -1L;
 	
-	private String nickName = null;
-	
-	private String message = null;
-	
-	private String time = null;
+	List<FeedbackItem> messages = null;
 
-	public long getUserId() {
-		return userId;
+	public List<FeedbackItem> getMessages() {
+		return messages;
 	}
 
-	public void setUserId(long userId) {
-		this.userId = userId;
+	public void setMessages(List<FeedbackItem> messages) {
+		this.messages = messages;
 	}
 
-	public String getNickName() {
-		return nickName;
-	}
-
-	public void setNickName(String nickName) {
-		this.nickName = nickName;
-	}
-
-	public String getMessage() {
-		return message;
-	}
-
-	public void setMessage(String message) {
-		this.message = message;
-	}
-
-	public String getTime() {
-		return time;
-	}
-
-	public void setTime(String time) {
-		this.time = time;
-	}
-
-	
 	@Override
 	public String toString() {
-		return "GetFeedbackResponse [userId=" + userId + ", nickName=" + nickName + ", message=" + message + ", time="
-				+ time + ", returnCode=" + returnCode + "]";
+		return "GetFeedbackResponse [messages=" + messages + ", returnCode="
+				+ returnCode + ", message=" + message + "]";
 	}
+	
 	
 }

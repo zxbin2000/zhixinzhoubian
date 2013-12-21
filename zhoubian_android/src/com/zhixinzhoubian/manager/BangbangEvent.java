@@ -10,7 +10,17 @@ public class BangbangEvent {
 		public static final int ACTION_UPDATE_USER_INFO = 1;
 
 		public static final int ACTION_PUBLISH_PIO_INFO = 2;
-
+		
+		public static final int ACTION_SUBSCRIBE_USER_INTEREST = 3;
+		
+		public static final int ACTION_SEARCH_POI_MSG = 4;
+		
+		public static final int ACTION_SEND_FEEDBACK_RESPONSE = 5;
+		
+		public static final int ACTION_GET_FEEDBACKS = 6; 
+		
+		public static final int ACTION_GET_MY_POI_MSG = 7;
+		
 	}
 	
 	private int id = -1;

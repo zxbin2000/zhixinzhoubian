@@ -4,7 +4,10 @@ package com.zhixinzhoubian.model;
 
 import java.util.Arrays;
 
-public class PoiMessage {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class PoiMessage implements Parcelable{
 
 	public class MessageType{
 		/**
@@ -208,6 +211,29 @@ public class PoiMessage {
 				+ Arrays.toString(imageUrls) + ", imageLocalUrls=" + Arrays.toString(imageLocalUrls) + ", poiTag="
 				+ Arrays.toString(poiTag) + ", longX=" + longX + ", latY=" + latY + ", distance=" + distance
 				+ ", beginTime=" + beginTime + ", endTime=" + endTime + "]";
+	}
+
+	@Override
+	public int describeContents() {
+		return 0;
+	}
+
+	@Override
+	public void writeToParcel(Parcel dest, int flags) {
+		dest.writeString(poiId);
+		dest.writeString(feedback);
+		dest.writeLong(userId);
+		dest.writeString(nickName);
+		dest.writeString(message);
+		dest.writeInt(messageType);
+		dest.writeArray(imageUrls);
+		dest.writeIntArray(poiTag);
+		dest.writeDouble(longX);
+		dest.writeDouble(latY);
+		dest.writeInt(distance);
+		dest.writeString(beginTime);
+		dest.writeString(endTime);
+
 	}
 
 }

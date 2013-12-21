@@ -27,7 +27,7 @@ public class RegisterActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
+		/*
 		setContentView(R.layout.register_activity);
 		EventBus.getDefault().register(this);
 
@@ -48,6 +48,9 @@ public class RegisterActivity extends Activity {
 			}
 			
 		});
+		*/
+		BangbangManager manager = BangbangManager.getInstance();
+		manager.updateUserInfo(RegisterActivity.this, 99999999L, "我是大神", "18612291961");
 		
 	}
 
