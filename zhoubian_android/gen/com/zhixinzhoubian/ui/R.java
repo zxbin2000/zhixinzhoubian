@@ -124,6 +124,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
     }
     public static final class drawable {
         public static final int ic_launcher=0x7f020000;
+<<<<<<< HEAD
         public static final int icon_marka=0x7f020001;
         public static final int icon_navi=0x7f020002;
         public static final int menu_shadow=0x7f020003;
@@ -141,6 +142,20 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int submit=0x7f050009;
         public static final int telephone=0x7f050008;
         public static final int textView1=0x7f050006;
+=======
+        public static final int menu_shadow=0x7f020001;
+    }
+    public static final class id {
+        public static final int action_settings=0x7f050008;
+        public static final int fullscreen=0x7f050001;
+        public static final int margin=0x7f050000;
+        public static final int nickName=0x7f050004;
+        public static final int selected_view=0x7f050002;
+        public static final int slidingmenumain=0x7f050007;
+        public static final int submit=0x7f050006;
+        public static final int telephone=0x7f050005;
+        public static final int textView1=0x7f050003;
+>>>>>>> 7bd719bd1e9818e9924c9e3bf6154f7ec963e9cd
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
