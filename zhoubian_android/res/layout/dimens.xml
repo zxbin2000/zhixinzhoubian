@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <bool name="default_circle_indicator_centered">true</bool>
+
+    <color name="default_circle_indicator_fill_color">#fffafafa</color>
+    <color name="default_circle_indicator_page_color">#ff000000</color>
+
+    <integer name="default_circle_indicator_orientation">0</integer>
+
+    <dimen name="default_circle_indicator_radius">3dp</dimen>
+
+    <bool name="default_circle_indicator_snap">true</bool>
+
+    <color name="default_circle_indicator_stroke_color">#fffafafa</color>
+
+    <dimen name="default_circle_indicator_stroke_width">0dp</dimen>
+    <dimen name="videos_list_padding_left">6dp</dimen>
+    <dimen name="videos_list_padding_top">6dp</dimen>
+    <dimen name="videos_list_padding_right">6dp</dimen>
+    <dimen name="videos_list_padding_bottom">2dp</dimen>
+    <dimen name="videos_list_horizontal_spacing">8dp</dimen>
+    <dimen name="video_poster_padding_left">4dp</dimen>
+    <dimen name="video_poster_padding_right">4dp</dimen>
+    <dimen name="video_poster_padding_top">6dp</dimen>
+    <dimen name="video_poster_padding_bottom">6dp</dimen>
+    
+    <dimen name="radar_city_download_height">30dp</dimen>
+    <dimen name="radar_city_collect_height">30dp</dimen>
+    <!-- recommend end -->
+
+
+    <!-- filter itme -->
+    <dimen name="filter_height">44dp</dimen>
+    <dimen name="filter_item_height">44dp</dimen>
+    <dimen name="order_item_height">44dp</dimen>
+    <!--  -->
+
+    <dimen name="shadow_width">6dp</dimen>
+    <dimen name="menu_behind_offset">40dp</dimen>
+    <dimen name="text_size_medium">15.0sp</dimen>
+    <dimen name="text_size_small">12.0sp</dimen>
+    <dimen name="view_bottom_tab_item_padding">0.0dip</dimen>
+    <dimen name="view_bottom_tab_item_height">55.0dip</dimen>
+    <dimen name="view_bottom_tab_item_width">60.0dip</dimen>
+    <dimen name="view_bottom_tab_item_margin_left">0.0dip</dimen>
+    <dimen name="view_bottom_tab_item_margin_right">0.0dip</dimen>
+    <dimen name="view_bottom_tab_item_margin_top">4.0dip</dimen>
+    <dimen name="list_view_item_height">100.0dip</dimen>
+    <dimen name="list_view_item_width">92.0dip</dimen>
+    <dimen name="list_view_item_image_margin_right">5.0dip</dimen>
+    <dimen name="list_view_item_image_padding">1.0dip</dimen>
+    <dimen name="list_view_item_text_margin_left">5.0dip</dimen>
+    <dimen name="list_view_item_text_margin_top">3.0dip</dimen>
+    <dimen name="list_view_item_text_margin_right">10.0dip</dimen>
+    <dimen name="dialog_button_height">44dp</dimen>
+
+    <!-- searchbox -->
+    <dimen name="float_searchbox_height">44dip</dimen>
+    <dimen name="clear_content_icon_size">30dip</dimen>
+    <dimen name="clear_content_icon_size_right">8dip</dimen>
+    <dimen name="bottom_tab_padding_drawable">2.0dip</dimen>
+    <dimen name="bottom_tab_padding_up">5.0dip</dimen>
+    <dimen name="bottom_tab_font_size">14.0dip</dimen>
+
+    <!-- new -->
+    <dimen name="float_searchbox_right_button_width">60dip</dimen>
+    <dimen name="edit_letter_width">50dip</dimen>
+    <dimen name="edit_letter_margin_right">7dip</dimen>
+
+    <!-- settings -->
+    <dimen name="settings_block_size">46dip</dimen>
+    <dimen name="settings_block_vertical_margin">16dp</dimen>
+    
+    <!-- titlebar-->
+    <dimen name="titlebar_height">46dp</dimen>
+    <dimen name="titlebar_shadow_height">4dp</dimen>
+    
+    <dimen name="banner_pop_tip_height">40dp</dimen>
+    
+    <dimen name="search_bar_height">44dp</dimen>
+    
+    <dimen name="edit_button_width">50dip</dimen>
+    <dimen name="caster_feedback_button_width">76dip</dimen>
+    
+    <!-- 详情页  -->
+    <dimen name="detail_padding_left">10dp</dimen>
+    <dimen name="detail_padding_right">10dp</dimen>
+    <dimen name="detail_list_padding_spacing">10dp</dimen>
+    
+    <!-- dialog -->
+    <dimen name="dialog_btn">16sp</dimen>
+    <!-- 排行榜listview中item电影名距顶部距离 -->
+    <dimen name="ranking_list_item_title">10dp</dimen>
+    
+    <dimen name="indicator_right_padding">10dp</dimen>
+    <dimen name="indicator_corner_radius">12dp</dimen>
+    <dimen name="indicator_internal_padding">4dp</dimen>
+	
+    <dimen name="radar_list_fling_min_x">60dp</dimen>
+    <dimen name="radar_list_fling_max_y">100dp</dimen>
+    
+    <!--  append -->
+    <dimen name="poster_padding_left">3dp</dimen>
+    <dimen name="poster_padding_right">3dp</dimen>
+    <dimen name="poster_padding_top">4dp</dimen>
+    <dimen name="poster_padding_bottom">4dp</dimen>
+    
+    <dimen name="game_horizontal_spacing">10dp</dimen>
+    
+    
+    <dimen name="caster_connected_img_width">250dp</dimen>
+	<dimen name="caster_connected_img_height">180dp</dimen>
+	<dimen name="caster_connected_img_margin_top">20dp</dimen>
+	<dimen name="caster_connected_img_margin_bottom">11dp</dimen>
+	
+	<dimen name="caster_banner_padding_top">6dp</dimen>
+	<dimen name="caster_banner_padding_left">7dp</dimen>
+	<dimen name="caster_banner_padding_right">7dp</dimen>
+	<dimen name="caster_banner_padding_bottom">20dp</dimen>
+	
+	<dimen name="caster_resolution_width">80dp</dimen>
+	<dimen name="caster_resolution_height">52dp</dimen>
+	<dimen name="caster_resolution_padding_left">-10dp</dimen>
+</resources>
